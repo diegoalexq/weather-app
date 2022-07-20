@@ -1,0 +1,19 @@
+.weather {
+  width: 80%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2rem;
+  flex-direction: column;
+  &__info {
+    &__name {
+      font-weight: 600;
+    }
+    &__temp {
+      font-size: 5rem;
+      font-weight: 600;
+    }
+  }
+}

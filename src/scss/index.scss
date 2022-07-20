@@ -1,0 +1,27 @@
+@import '../components/Search/search.scss';
+@import '../components/Dropdown/dropdown.scss';
+@import '../components/Weather/weather.scss';
+
+@import'./config.scss';
+
+.main-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  background: $main-color-background;
+  height: 100vh;
+  width: 100%;
+  border-radius: 25px;
+  -webkit-box-shadow: 1px 1px 21px -4px #000000; 
+  box-shadow: 1px 1px 21px -4px #000000;
+  color: white;
+  .error-container {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

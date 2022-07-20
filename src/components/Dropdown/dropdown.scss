@@ -1,0 +1,19 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  width: 80%;
+  background: white;
+  margin: 0 auto;
+  border-radius: 5px;
+  color: #b6b4b4;
+  ul {
+    padding: 0;
+    margin: 1;
+    li {
+      list-style-type: none;
+      cursor: pointer;
+    }
+  }
+  
+}
