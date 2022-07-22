@@ -24,7 +24,7 @@ export const Search = ({ parentCallback }) => {
 
   useEffect(() => {
     const clickedOutside = e => {
-      if (isDropdownOpen && container.current && !container.current.contains(e.target)) {
+      if (isDropdownOpen && !container.current.contains(e.target)) {
         setIsDropdownOpen(false);
         setLocations([]);
       }
@@ -33,8 +33,12 @@ export const Search = ({ parentCallback }) => {
 
   }, [isDropdownOpen])
 
+  const handleDropdown = (value) => {
+    setIsDropdownOpen(value);
+  }
+
   return (
-    <div className="header" ref={container}>
+    <>
       <div className="search">
         <input
           ref={inputSearch}
@@ -51,8 +55,9 @@ export const Search = ({ parentCallback }) => {
           <i className="fa fa-search" aria-hidden="true"></i>
         </button>
       </div>
-      { locations.length > 0 && isDropdownOpen && <Dropdow locations = {locations} parentCallback ={parentCallback}/> }
-    </div>
-    
+      <div className="dropdown-container" ref={container}>
+        { locations.length >0 && isDropdownOpen && <Dropdow locations = {locations} parentCallback ={parentCallback} DropdownOpen={handleDropdown}/> }
+      </div>
+    </>
   )
 }
